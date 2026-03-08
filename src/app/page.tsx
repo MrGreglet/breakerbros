@@ -13,7 +13,6 @@ import {
   BTN_SECONDARY_DARK,
   BTN_SECONDARY_LIGHT,
   CARD_CLASS,
-  CARD_PADDING,
   MAP_WRAPPER,
   BORDER_DIVIDER,
   PHONE_DISPLAY,
@@ -120,27 +119,29 @@ export default function Home() {
         </section>
 
         {/* What We Do */}
-        <section className={`${CONTAINER} py-16 md:py-24`}>
-          <h2 className={`${H2_CLASS} text-charcoal mb-10`}>What We Do</h2>
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service) => (
-              <article key={service.title} className={CARD_CLASS}>
-                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-t-2xl md:h-52">
-                  <Image
-                    src={service.image}
-                    alt={service.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-7 pt-7 md:p-8 md:pt-8">
-                  <h3 className={`${H3_CLASS} text-charcoal`}>{service.title}</h3>
-                  <p className={`mt-5 flex-1 ${BODY_CLASS} ${BODY_MUTED}`}>{service.description}</p>
-                  <p className="mt-6 text-base font-semibold text-muted-green">Call or email to enquire</p>
-                </div>
-              </article>
-            ))}
+        <section className="py-16 md:py-24">
+          <div className={CONTAINER}>
+            <h2 className={`${H2_CLASS} text-charcoal mb-10`}>What We Do</h2>
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((service) => (
+                <article key={service.title} className={CARD_CLASS}>
+                  <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-t-2xl md:h-52">
+                    <Image
+                      src={service.image}
+                      alt={service.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-7 pt-7 md:p-8 md:pt-8">
+                    <h3 className={`${H3_CLASS} text-charcoal`}>{service.title}</h3>
+                    <p className={`mt-5 flex-1 ${BODY_CLASS} ${BODY_MUTED}`}>{service.description}</p>
+                    <p className="mt-6 text-base font-semibold text-muted-green">Call or email to enquire</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -174,16 +175,18 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className={`${CONTAINER} pt-20 pb-16 md:pt-28 md:pb-24`}>
-          <h2 className={`${H2_CLASS} text-charcoal mb-10`}>Why Choose Us</h2>
-          <ul className="grid gap-6 md:grid-cols-2 md:gap-x-20 md:gap-y-5">
-            {WHY_CHOOSE.map((item) => (
-              <li key={item} className="flex gap-4">
-                <span className="mt-0.5 shrink-0 text-muted-green" aria-hidden>✓</span>
-                <span className={`${BODY_CLASS} ${BODY_MUTED} leading-relaxed`}>{item}</span>
-              </li>
-            ))}
-          </ul>
+        <section className="pt-20 pb-16 md:pt-28 md:pb-24">
+          <div className={CONTAINER}>
+            <h2 className={`${H2_CLASS} text-charcoal mb-10`}>Why Choose Us</h2>
+            <ul className="grid gap-6 md:grid-cols-2 md:gap-x-20 md:gap-y-5">
+              {WHY_CHOOSE.map((item) => (
+                <li key={item} className="flex gap-4">
+                  <span className="mt-0.5 shrink-0 text-muted-green" aria-hidden>✓</span>
+                  <span className={`${BODY_CLASS} ${BODY_MUTED} leading-relaxed`}>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         {/* Where We Are */}

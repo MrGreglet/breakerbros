@@ -171,29 +171,29 @@ export default function Home() {
         </section>
 
         {/* Visual break */}
-        <section className="relative h-[320px] w-full overflow-hidden md:h-[400px]">
+        <section className="relative h-[320px] w-full overflow-hidden md:h-[400px] mt-4 mb-4 md:mt-6 md:mb-6">
           <Image src="/images/offroad2.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-charcoal/35" aria-hidden />
         </section>
 
         {/* Why Choose Us */}
-        <section className={`${CONTAINER} ${SECTION_PY}`}>
+        <section className={`${CONTAINER} pt-24 pb-20 md:pt-32 md:pb-28`}>
           <h2 className={`${H2_CLASS} text-charcoal`}>Why Choose Us</h2>
-          <ul className={`${GAP_HEADING} grid gap-4 md:grid-cols-2 md:gap-x-12 md:gap-y-3`}>
+          <ul className="mt-14 md:mt-16 grid gap-5 md:grid-cols-2 md:gap-x-16 md:gap-y-4">
             {WHY_CHOOSE.map((item) => (
-              <li key={item} className="flex gap-3">
+              <li key={item} className="flex gap-4">
                 <span className="mt-0.5 shrink-0 text-muted-green" aria-hidden>✓</span>
-                <span className={`${BODY_CLASS} ${BODY_MUTED}`}>{item}</span>
+                <span className={`${BODY_CLASS} ${BODY_MUTED} leading-relaxed`}>{item}</span>
               </li>
             ))}
           </ul>
         </section>
 
         {/* Where We Are */}
-        <section className={`bg-offwhite ${SECTION_PY}`}>
+        <section className={`bg-offwhite pt-24 pb-20 md:pt-32 md:pb-28`}>
           <div className={CONTAINER}>
             <h2 className={`${H2_CLASS} text-charcoal`}>Where We Are</h2>
-            <p className={`${LEAD_CLASS} ${GAP_HEADING} text-charcoal/90`}>
+            <p className={`${LEAD_CLASS} mt-5 md:mt-6 text-charcoal/90`}>
               Based near Pinxton, supplying Land Rover parts across the UK.
             </p>
             <div className="mt-8">

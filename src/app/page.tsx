@@ -2,9 +2,6 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 import {
   CONTAINER,
-  SECTION_PY,
-  GAP_HEADING,
-  GAP_BUTTONS,
   H1_HERO,
   H2_CLASS,
   H2_CLASS_LARGE,
@@ -123,9 +120,9 @@ export default function Home() {
         </section>
 
         {/* What We Do */}
-        <section className={`${CONTAINER} ${SECTION_PY}`}>
-          <h2 className={`${H2_CLASS} text-charcoal`}>What We Do</h2>
-          <div className={`${GAP_HEADING} grid gap-8 sm:grid-cols-2 lg:grid-cols-3`}>
+        <section className={`${CONTAINER} py-16 md:py-24`}>
+          <h2 className={`${H2_CLASS} text-charcoal mb-10`}>What We Do</h2>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => (
               <article key={service.title} className={CARD_CLASS}>
                 <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-t-2xl md:h-52">
@@ -137,9 +134,9 @@ export default function Home() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className={`flex flex-1 flex-col ${CARD_PADDING}`}>
+                <div className="flex flex-1 flex-col p-7 pt-7 md:p-8 md:pt-8">
                   <h3 className={`${H3_CLASS} text-charcoal`}>{service.title}</h3>
-                  <p className={`mt-4 flex-1 ${BODY_CLASS} ${BODY_MUTED}`}>{service.description}</p>
+                  <p className={`mt-5 flex-1 ${BODY_CLASS} ${BODY_MUTED}`}>{service.description}</p>
                   <p className="mt-6 text-base font-semibold text-muted-green">Call or email to enquire</p>
                 </div>
               </article>
@@ -148,21 +145,21 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section className={`bg-charcoal-light text-offwhite ${SECTION_PY}`}>
+        <section className="bg-charcoal-light text-offwhite py-16 md:py-24">
           <div className={CONTAINER}>
-            <h2 className={H2_CLASS}>How It Works</h2>
-            <div className={`${GAP_HEADING} grid gap-10 md:grid-cols-3 md:gap-8`}>
+            <h2 className={`${H2_CLASS} mb-10`}>How It Works</h2>
+            <div className="grid gap-12 md:grid-cols-3 md:gap-10">
               {STEPS.map((step, i) => (
                 <div key={step.title} className="text-left">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-muted-green text-lg font-bold text-white" aria-hidden>
                     {i + 1}
                   </span>
-                  <h3 className={`${H3_CLASS} mt-5 text-offwhite`}>{step.title}</h3>
-                  <p className={`mt-3 ${BODY_CLASS} text-offwhite/90`}>{step.description}</p>
+                  <h3 className={`${H3_CLASS} mt-6 text-offwhite`}>{step.title}</h3>
+                  <p className={`mt-4 ${BODY_CLASS} text-offwhite/90`}>{step.description}</p>
                 </div>
               ))}
             </div>
-            <div className={`${GAP_BUTTONS} flex justify-center`}>
+            <div className="mt-16 flex justify-center md:mt-20">
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now — Speak Directly to a Specialist
               </a>
@@ -171,15 +168,15 @@ export default function Home() {
         </section>
 
         {/* Visual break */}
-        <section className="relative h-[320px] w-full overflow-hidden md:h-[400px] mt-4 mb-4 md:mt-6 md:mb-6">
+        <section className="relative h-[320px] w-full overflow-hidden md:h-[400px] mt-6 mb-6 md:mt-8 md:mb-8">
           <Image src="/images/offroad2.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-charcoal/35" aria-hidden />
         </section>
 
         {/* Why Choose Us */}
-        <section className={`${CONTAINER} pt-24 pb-20 md:pt-32 md:pb-28`}>
-          <h2 className={`${H2_CLASS} text-charcoal`}>Why Choose Us</h2>
-          <ul className="mt-14 md:mt-16 grid gap-5 md:grid-cols-2 md:gap-x-16 md:gap-y-4">
+        <section className={`${CONTAINER} pt-20 pb-16 md:pt-28 md:pb-24`}>
+          <h2 className={`${H2_CLASS} text-charcoal mb-10`}>Why Choose Us</h2>
+          <ul className="grid gap-6 md:grid-cols-2 md:gap-x-20 md:gap-y-5">
             {WHY_CHOOSE.map((item) => (
               <li key={item} className="flex gap-4">
                 <span className="mt-0.5 shrink-0 text-muted-green" aria-hidden>✓</span>
@@ -190,13 +187,13 @@ export default function Home() {
         </section>
 
         {/* Where We Are */}
-        <section className={`bg-offwhite pt-24 pb-20 md:pt-32 md:pb-28`}>
+        <section className="bg-offwhite pt-20 pb-16 md:pt-28 md:pb-24">
           <div className={CONTAINER}>
-            <h2 className={`${H2_CLASS} text-charcoal`}>Where We Are</h2>
-            <p className={`${LEAD_CLASS} mt-5 md:mt-6 text-charcoal/90`}>
+            <h2 className={`${H2_CLASS} text-charcoal mb-10`}>Where We Are</h2>
+            <p className={`${LEAD_CLASS} mt-6 md:mt-8 text-charcoal/90`}>
               Based near Pinxton, supplying Land Rover parts across the UK.
             </p>
-            <div className="mt-8">
+            <div className="mt-10">
               <div className={MAP_WRAPPER}>
                 <div className="aspect-video w-full">
                   <iframe
@@ -213,7 +210,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={`${GAP_BUTTONS} flex flex-col gap-6 sm:flex-row sm:items-center`}>
+            <div className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center md:mt-20">
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now
               </a>
@@ -236,7 +233,7 @@ export default function Home() {
                 {siteConfig.phone}
               </a>
             </p>
-            <div className={`${GAP_BUTTONS} flex flex-col gap-6 sm:flex-row sm:items-center`}>
+            <div className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center md:mt-20">
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now
               </a>

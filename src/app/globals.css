@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --charcoal: #1a1a1a;
+    --offwhite: #f5f3ef;
+    --muted-green: #4a5d4a;
+  }
+}
+

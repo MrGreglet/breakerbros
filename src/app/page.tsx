@@ -2,6 +2,11 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 import {
   CONTAINER,
+  SECTION_PY,
+  CTA_SECTION_PY,
+  FOOTER_PY,
+  GAP_HEADING,
+  GAP_BUTTONS,
   H1_HERO,
   H2_CLASS,
   H2_CLASS_LARGE,
@@ -13,6 +18,7 @@ import {
   BTN_SECONDARY_DARK,
   BTN_SECONDARY_LIGHT,
   CARD_CLASS,
+  CARD_PADDING,
   MAP_WRAPPER,
   BORDER_DIVIDER,
   PHONE_DISPLAY,
@@ -102,7 +108,7 @@ export default function Home() {
             <p className="mt-8 max-w-2xl text-white/95 md:mt-10 md:text-xl md:leading-relaxed lg:text-2xl">
               Specialist Land Rover knowledge. Quality used parts. Fast replies. UK shipping available.
             </p>
-            <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row sm:justify-center md:mt-14">
+            <div className={`${GAP_BUTTONS} flex flex-col items-center gap-6 sm:flex-row sm:justify-center`}>
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now
               </a>
@@ -119,7 +125,7 @@ export default function Home() {
         </section>
 
         {/* What We Do */}
-        <section className="py-20 md:py-28">
+        <section className={SECTION_PY}>
           <div className={CONTAINER}>
             <h2 className={`${H2_CLASS} text-charcoal mb-14`}>What We Do</h2>
             <div className="grid gap-14 sm:grid-cols-2 lg:grid-cols-3">
@@ -134,7 +140,7 @@ export default function Home() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col p-8 pt-8 md:p-10 md:pt-9">
+                  <div className={`flex flex-1 flex-col ${CARD_PADDING}`}>
                     <h3 className={`${H3_CLASS} text-charcoal`}>{service.title}</h3>
                     <p className={`mt-5 flex-1 ${BODY_CLASS} ${BODY_MUTED}`}>{service.description}</p>
                     <p className="mt-6 text-base font-semibold text-muted-green">Call or email to enquire</p>
@@ -146,7 +152,7 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section className="bg-charcoal-light text-offwhite py-20 md:py-28">
+        <section className={`bg-charcoal-light text-offwhite ${SECTION_PY}`}>
           <div className={CONTAINER}>
             <h2 className={`${H2_CLASS} mb-14`}>How It Works</h2>
             <div className="grid gap-14 md:grid-cols-3 md:gap-12">
@@ -160,7 +166,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-20 flex justify-center md:mt-24">
+            <div className={`${GAP_BUTTONS} flex justify-center`}>
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now — Speak Directly to a Specialist
               </a>
@@ -175,7 +181,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="pt-24 pb-20 md:pt-32 md:pb-28">
+        <section className={SECTION_PY}>
           <div className={CONTAINER}>
             <h2 className={`${H2_CLASS} text-charcoal mb-12`}>Why Choose Us</h2>
             <ul className="grid gap-8 md:grid-cols-2 md:gap-x-24 md:gap-y-6">
@@ -190,10 +196,10 @@ export default function Home() {
         </section>
 
         {/* Where We Are */}
-        <section className="bg-offwhite pt-24 pb-20 md:pt-32 md:pb-28">
+        <section className={`bg-offwhite ${SECTION_PY}`}>
           <div className={CONTAINER}>
             <h2 className={`${H2_CLASS} text-charcoal mb-14`}>Where We Are</h2>
-            <p className={`${LEAD_CLASS} mt-10 md:mt-12 text-charcoal/90`}>
+            <p className={`${LEAD_CLASS} ${GAP_HEADING} text-charcoal/90`}>
               Based near Pinxton, supplying Land Rover parts across the UK.
             </p>
             <div className="mt-12">
@@ -213,7 +219,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-20 flex flex-col gap-6 sm:flex-row sm:items-center md:mt-24">
+            <div className={`${GAP_BUTTONS} flex flex-col gap-6 sm:flex-row sm:items-center`}>
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now
               </a>
@@ -225,10 +231,10 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className={`bg-charcoal text-offwhite pt-24 md:pt-32 pb-28 md:pb-36`}>
+        <section className={`bg-charcoal text-offwhite ${CTA_SECTION_PY}`}>
           <div className={CONTAINER}>
             <h2 className={H2_CLASS_LARGE}>Need a Land Rover Part Today?</h2>
-            <p className="mt-10 md:mt-12">
+            <p className={GAP_HEADING}>
               <a
                 href={telHref}
                 className={`${PHONE_DISPLAY} text-offwhite underline decoration-muted-green decoration-2 underline-offset-4 hover:no-underline`}
@@ -236,7 +242,7 @@ export default function Home() {
                 {siteConfig.phone}
               </a>
             </p>
-            <div className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center md:mt-20">
+            <div className={`${GAP_BUTTONS} flex flex-col gap-6 sm:flex-row sm:items-center`}>
               <a href={telHref} className={BTN_PRIMARY}>
                 Call Now
               </a>
@@ -248,7 +254,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className={`border-t ${BORDER_DIVIDER} bg-charcoal-light pt-20 pb-16 md:pt-24 md:pb-20`}>
+        <footer className={`border-t ${BORDER_DIVIDER} bg-charcoal-light ${FOOTER_PY}`}>
           <div className={CONTAINER}>
             <p className="text-xl font-bold text-offwhite">{siteConfig.businessName}</p>
             <p className="mt-4">

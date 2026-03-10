@@ -1,30 +1,31 @@
-# Breaker Bros — Landing Page
+# Breaker Bros
 
-One-page conversion-focused landing site for Breaker Bros (Land Rover breakers, Pinxton, UK).
+Plain static website. No framework. No build step.
 
-## Edit contact details
+## Structure
 
-Update **`src/lib/siteConfig.ts`** with your real phone number, email, and any other business info. All CTAs and footer use this config.
-
-## Run locally
-
-```bash
-npm install
-npm run dev
+```
+/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── images/
+    ├── offroad.jpg
+    ├── offroad2.jpg
+    ├── engine.jpg
+    ├── breaking.jpg
+    └── workshop.jpg
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+## Running locally
 
-## Deploy (Vercel)
+Open `index.html` in any browser. No server required.
 
-```bash
-npm run build
-```
+## Deploying
 
-Then connect the repo to [Vercel](https://vercel.com) or run `vercel` from the project root.
+Deployed automatically to GitHub Pages via `.github/workflows/deploy.yml`
+on every push to `master`.
 
-## Tech
-
-- Next.js 14 (App Router) + TypeScript
-- Tailwind CSS
-- No forms — direct call/email CTAs only
+Live site: https://mrgreglet.github.io/breakerbros/
